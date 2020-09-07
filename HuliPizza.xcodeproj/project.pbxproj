@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7D630ED92505CE720049A0F3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D630ED82505CE720049A0F3 /* MapViewController.swift */; };
 		7D630EDB2505CEB40049A0F3 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D630EDA2505CEB40049A0F3 /* MapView.swift */; };
+		7D630EDD2505D71F0049A0F3 /* CloseUpMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D630EDC2505D71F0049A0F3 /* CloseUpMapView.swift */; };
 		7D66263825033E16006EF721 /* HistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D66263725033E16006EF721 /* HistoryDetailView.swift */; };
 		7D66263C250360A6006EF721 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D66263B250360A6006EF721 /* RootTabView.swift */; };
 		7D66263E25038A34006EF721 /* ConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D66263D25038A34006EF721 /* ConfirmView.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		7D630ED82505CE720049A0F3 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7D630EDA2505CEB40049A0F3 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		7D630EDC2505D71F0049A0F3 /* CloseUpMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseUpMapView.swift; sourceTree = "<group>"; };
 		7D66263725033E16006EF721 /* HistoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailView.swift; sourceTree = "<group>"; };
 		7D66263B250360A6006EF721 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootTabView.swift; path = ../RootTabView.swift; sourceTree = "<group>"; };
 		7D66263D25038A34006EF721 /* ConfirmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmView.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				7D66263725033E16006EF721 /* HistoryDetailView.swift */,
 				7D630ED82505CE720049A0F3 /* MapViewController.swift */,
 				7D630EDA2505CEB40049A0F3 /* MapView.swift */,
+				7D630EDC2505D71F0049A0F3 /* CloseUpMapView.swift */,
 			);
 			path = HistoryView;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				7D69B9CB24EE5E170054A7C4 /* OrderModel.swift in Sources */,
 				7D9104C924ECFF2200954512 /* ListHeaderView.swift in Sources */,
 				7DD3E34624EC745300BFC2FE /* ContentHeaderView.swift in Sources */,
+				7D630EDD2505D71F0049A0F3 /* CloseUpMapView.swift in Sources */,
 				7DD3E34C24EC8BD200BFC2FE /* RatingsView.swift in Sources */,
 				7DD3E34A24EC8B8900BFC2FE /* MenuRowView.swift in Sources */,
 				7DD3E32C24EB16FD00BFC2FE /* SceneDelegate.swift in Sources */,

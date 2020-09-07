@@ -11,6 +11,7 @@ import SwiftUI
 struct HistoryDetailView: View {
     var historyItem: HistoryItem
     @Binding var imageID:Int
+    @State var isPresented:Bool = false
 
      var body: some View {
         imageID = historyItem.id
@@ -18,6 +19,7 @@ struct HistoryDetailView: View {
             PageTitleView(title: historyItem.name)
             MapView(latitude: historyItem.latitude, longitude: historyItem.longitude, regionRadius: 1000000)
                 .frame(height:100)
+            PresentMapButton(isPresented: $isPresented, historyItem: historyItem)
             Text(historyItem.history)
                 .frame(height:300)
         }
