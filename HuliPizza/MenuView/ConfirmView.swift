@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ConfirmView: View {
+    let sizes:[Size] = [.small, .medium, .large]
     var menuID:Int
     @Binding var isPresented:Bool
     @ObservedObject var orderModel:OrderModel
@@ -25,6 +26,9 @@ struct ConfirmView: View {
         orderModel.add(menuID: menuID, size: size, quantity: quantity, comments: comments)
         isPresented = false
     }
+    func cancelItem(){
+        isPresented = false
+    }
     
     var body: some View {
         VStack{
@@ -35,22 +39,40 @@ struct ConfirmView: View {
             Divider()
             SelectedImageView(image: "\(menuID)_250w")
                 .padding(10)
-                .onTapGesture(count:2) {
-                    self.isPresented = false
-            }
+//                .onTapGesture(count:2) {
+//                    self.isPresented = false
+//            }
+                .gesture(
+                    TapGesture(count:2)
+                        .onEnded {
+                            self.isPresented = false
+                    }
+            )
             Divider()
             Text("Confirm your order of \(quantity) \(size.formatted()) \(name) pizza")
                 .font(.headline)
             TextField("Add your comments", text:$comments)
                 .background(Color("G4"))
+            SizePickerView(size:$size)
+            QuantityStepperView(quantity:$quantity)
             Spacer()
-            Button(action: addItem){
-                Text("Add")
-                    .font(.title)
-                .padding()
-                .background(Color("G4"))
-                .cornerRadius(10)
-            }.padding([.bottom])
+            HStack {
+                Button(action: addItem){
+                    Text("Add")
+                        .font(.title)
+                    .padding()
+                    .background(Color("G4"))
+                    .cornerRadius(10)
+                }
+                Spacer()
+                Button(action: cancelItem){
+                    Text("Cancel")
+                        .font(.title)
+                    .padding()
+                    .background(Color("G4"))
+                    .cornerRadius(10)
+                }
+            }.padding(20)
         }
         .background(Color("G3"))
         .foregroundColor(Color("IP"))
