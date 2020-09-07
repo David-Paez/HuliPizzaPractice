@@ -35,6 +35,9 @@ struct ConfirmView: View {
             Divider()
             SelectedImageView(image: "\(menuID)_250w")
                 .padding(10)
+                .onTapGesture(count:2) {
+                    self.isPresented = false
+            }
             Divider()
             Text("Confirm your order of \(quantity) \(size.formatted()) \(name) pizza")
                 .font(.headline)
